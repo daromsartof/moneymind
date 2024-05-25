@@ -41,19 +41,21 @@ The backend is powered by Express.js and MongoDB, providing a robust and scalabl
 
    ```bash
    git clone https://github.com/daromsartof/moneymind.git
-   cd moneymind```
+   cd moneymind
 
 2. install dependencies:
 
    ```bash
-   npm install```
+   npm install
 
 3. Set up environment variables:
+
    ```bash
-    MONGO_URI=your_mongodb_connection_string
+   MONGO_URI=your_mongodb_connection_string
    JWT_SECRET=your_jwt_secret_key
-   PORT=5000```
+   PORT=5000
+
 4. Start the server:
-```bash
-    npm start
-```
+
+   ```bash
+   npm start
