@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import connectDB from './src/config/db.js';
+import connectDB from './config/db.js';
 import userRoutes from './src/routes/userRoutes.js';
 import categoryRoutes from './src/routes/categoryRoutes.js';
 import transactionRoutes from './src/routes/transactionRoutes.js';

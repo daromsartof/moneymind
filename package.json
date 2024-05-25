@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "setup": "node src/setup.js",
-    "serve": "nodemon index.js"
+    "serve": "nodemon index.js",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
