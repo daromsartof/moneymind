@@ -1,0 +1,27 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: DockerFile.dev
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    environment:
+      - NODE_ENV=development
+      - MONGO_URL=mongodb://mongo:27017/moneymind
+      - PORT=3000
+      - JWT_SECRET=0wI37HoZPV
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    ports:
+     - "27017:27017"
+    volumes:
+     - mongo-data:/data/db
+
+volumes:
+  mongo-data:

@@ -1,0 +1,24 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: DockerFile
+    ports:
+      - 3000:3000
+    environment:
+      - NODE_ENV=production
+      - MONGO_URL=mongodb://mongo:27017/moneymind
+      - PORT=3000
+      - JWT_SECRET=0wI37HoZPV
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    ports:
+     - "27017:27017"
+    volumes:
+     - mongo-data:/data/db
+
+volumes:
+  mongo-data:

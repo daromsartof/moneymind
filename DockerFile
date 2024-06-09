@@ -1,0 +1,14 @@
+ARG NODE_VERSION=22.2.0
+FROM node:${NODE_VERSION}-alpine
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+RUN npm install --omit=dev
+
+COPY . .
+
+EXPOSE 3000
+
+
+CMD [ "npm", "start" ]

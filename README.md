@@ -21,6 +21,7 @@ The backend is powered by Express.js and MongoDB, providing a robust and scalabl
 - **Backend:**
   - [Express.js](https://expressjs.com/)
   - [Mongoose](https://mongoosejs.com/)
+  - [Docker](https://www.docker.com/)
   - [JSON Web Tokens (JWT)](https://jwt.io/)
   - [bcryptjs](https://github.com/dcodeIO/bcrypt.js/)
 - **Database:**
@@ -32,30 +33,35 @@ The backend is powered by Express.js and MongoDB, providing a robust and scalabl
 
 ### Prerequisites
 
-- Node.js
-- MongoDB
+-Docker and docker-compose
 
 ### Installation
 
-1. Clone the repository:
+Clone the repository:
 
    ```bash
    git clone https://github.com/daromsartof/moneymind.git
    cd moneymind
 
-2. install dependencies:
+## Docker Setup
 
+### Developpement Environments
+
+1. **Build and run the containers:**
    ```bash
-   npm install
+   docker-compose -f docker-compose.dev.yml up --build
 
-3. Set up environment variables:
-
+2. ** Stopping the containers:**
    ```bash
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret_key
-   PORT=5000
+   docker-compose -f docker-compose.dev.yml down
 
-4. Start the server:
+### Developpement Environments
 
+1. **Build and run the containers:**
    ```bash
-   npm start
+   docker-compose -f docker-compose.yml up --build -d
+
+2. ** Stopping the containers:**
+   ```bash
+   docker-compose -f docker-compose.yml down
+   
