@@ -39,17 +39,23 @@ The backend is powered by Express.js and MongoDB, providing a robust and scalabl
 
 Clone the repository:
 
-   ```bash git clone https://github.com/daromsartof/moneymind.git cd moneymind```
+   ```bash 
+   git clone https://github.com/daromsartof/moneymind.git cd moneymind
+```
 
 ## Docker Setup
 
 ### Developpement Environments
 
 1. **Build and run the containers:**
-   ```bash docker-compose -f docker-compose.dev.yml up --build```
+   ```bash
+   docker-compose -f docker-compose.dev.yml up --build
+   ```
 
-2. ** Stopping the containers:**
-   ```bash docker-compose -f docker-compose.dev.yml down ```
+3. **Stopping the containers:**
+   ```bash
+   docker-compose -f docker-compose.dev.yml down
+   ```
 
 ### Developpement Environments
 
@@ -57,6 +63,8 @@ Clone the repository:
    ```bash
    docker-compose -f docker-compose.yml up --build -d
 
-2. ** Stopping the containers:**
-   ```bash docker-compose -f docker-compose.yml down```
+2. **Stopping the containers:**
+   ```bash
+   docker-compose -f docker-compose.yml down
+   ```
    
